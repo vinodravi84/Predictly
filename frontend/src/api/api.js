@@ -1,4 +1,4 @@
-const API_BASE = process.env.REACT_APP_API_BASE || 'http://localhost:8000';
+const API_BASE = process.env.REACT_APP_API_BASE || 'https://vinod84288-predictly.hf.space';
 
 export async function predictSingle({ file, catalog_content, image_weight = 0.5 }) {
   // Always send FormData for consistent server handling
