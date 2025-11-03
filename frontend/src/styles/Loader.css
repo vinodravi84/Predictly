@@ -1,0 +1,91 @@
+/* ===================================
+   LOADER.CSS - Loading Component Styles
+   =================================== */
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  animation: pulse 2s ease infinite;
+  position: relative;
+}
+
+.loader::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Alternative loader with multiple dots */
+.loader.dots {
+  gap: 0.5rem;
+}
+
+.loader.dots::before,
+.loader.dots::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: var(--primary);
+  border-radius: 50%;
+  animation: dotBounce 1.4s ease-in-out infinite;
+}
+
+.loader.dots::before {
+  animation-delay: -0.32s;
+}
+
+.loader.dots::after {
+  animation-delay: -0.16s;
+}
+
+@keyframes dotBounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Spinner with glow effect */
+.loader.glow::before {
+  border-width: 4px;
+  width: 24px;
+  height: 24px;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+  animation: spinGlow 1s linear infinite;
+}
+
+@keyframes spinGlow {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.8);
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+  }
+}
