@@ -1,5 +1,10 @@
 # 🧠 Smart Price Prediction System
 
+
+**🌐 Live Demo:** [https://predictly-ten.vercel.app/](https://predictly-ten.vercel.app/)
+
+Built with:
+
 A full-stack AI-powered web application that predicts the **price of a product** based on its **image** and **text description**.
 
 Built with:
