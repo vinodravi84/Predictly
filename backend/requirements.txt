@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+torch
+torchvision
+torchaudio
+scikit-learn
+numpy
+pandas
+pillow
+joblib
+lightgbm
+pydantic
+python-multipart
